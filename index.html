@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr-ca">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulaire assurance</title>
-  </head>
-  <body>
-    <form>
-      <fieldset>
-        <legend>Soumissions d'assurance auto</legend>
-        <label for="genre">Quel est votre genre?</label>
-        <select id="genre" name="genre">
-          <option value="homme">Homme</option>
-          <option value="femme">Femmme</option>
-          <option value="non-binaire">Non-Binaire</option>
-        </select>
-        <br />
-        <label for="naissance">Date de naissance:</label>
-        <input type="date" id="naissance" name="naissance" required />
-        <br />
-        <label>Quelle est la valeur d'achat de votre véhicule?</label>
-        <input type="number" name="valeur" min="0" max="100 000 000" required />
-        <br />
-        <label>Quelle est l'année de fabrication de votre véhicule?</label>
-        <input type="number" name="année" min="1890" max="2023" required />
-        <br />
-        <label>Combien de kilomètres parcourez-vous par année?</label>
-        <input type="number" name="km" min="0" max="100 000" required />
-        <br />
-        <label for="camera"
-          >Est-ce que votre véhicule possède une caméra de recul?</label
-        >
-        <br />
-        <input type="radio" name="camera" value="1" required />
-        <span>Oui</span>
-        <input type="radio" name="camera" value="2" required />
-        <span>Non</span>
-        <br />
-        <label for="camera"
-          >Avez-vous fait des réclamations d'assurance auto dans les 6 dernières
-          années?</label
-        >
-        <br />
-        <input type="radio" name="reclamation" value="1" required />
-        <span>Oui</span>
-        <input type="radio" name="reclamation" value="2" required />
-        <span>Non</span>
-        <br />
-        <label for="nbreclamation"
-          >Combien de réclamations avez-vous faites?</label
-        >
-        <input type="number" name="nbreclamation" min="1" max="100" required />
-        <br />
-        <label for="montant"
-          >Pour la réclamation #x, quel montant avez-vous réclamé?</label
-        >
-        <input type="number" name="montant" min="1" max="1 000 000" required />
-        <br />
-        <input type="submit" value="Envoyer" />
-      </fieldset>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaire assurance</title>
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+</head>
+
+<body>
+  <div class="inputGroup">
+    <form class="form">
+      <div class="input-group">
+        <fieldset>
+          <legend class="title">Soumissions d'assurance auto</legend>
+          <label for="genre">Quel est votre genre?</label>
+          <select id="genre" name="genre">
+            <option value="homme">Homme</option>
+            <option value="femme">Femmme</option>
+            <option value="non-binaire">Non-Binaire</option>
+          </select>
+          <br />
+          <label for="naissance">Date de naissance:</label>
+          <input type="date" id="naissance" name="naissance" required />
+          <br />
+          <label>Quelle est la valeur d'achat de votre véhicule?</label>
+          <input type="number" name="valeur" min="0" max="100 000 000" required />
+          <br />
+          <label>Quelle est l'année de fabrication de votre véhicule?</label>
+          <input type="number" name="année" min="1890" max="2023" required />
+          <br />
+          <label>Combien de kilomètres parcourez-vous par année?</label>
+          <input type="number" name="km" min="0" max="100 000" required />
+          <br />
+          <label for="camera">Est-ce que votre véhicule possède une caméra de recul?</label>
+          <br />
+          <input type="radio" name="camera" value="1" required />
+          <span>Oui</span>
+          <input type="radio" name="camera" value="2" required />
+          <span>Non</span>
+          <br />
+          <label for="camera">Avez-vous fait des réclamations d'assurance auto dans les 6 dernières
+            années?</label>
+          <br />
+          <input type="radio" name="reclamation" value="1" required />
+          <span>Oui</span>
+          <input type="radio" name="reclamation" value="2" required />
+          <span>Non</span>
+          <br />
+          <label for="nbreclamation">Combien de réclamations avez-vous faites?</label>
+          <input type="number" name="nbreclamation" min="1" max="100" required />
+          <br />
+          <label for="montant">Pour la réclamation #x, quel montant avez-vous réclamé?</label>
+          <input type="number" name="montant" min="1" max="1 000 000" required />
+          <br />
+          <br />
+          <br />
+          <button class="sign">Envoyer</button>
+        </fieldset>
+      </div>
     </form>
-  </body>
+  </div>
+</body>
+
 </html>
