@@ -34,6 +34,7 @@
 						<div class="troisieme-question">
 							<label>Quelle est la valeur d'achat de votre véhicule?</label>
 							<input
+								id="valeur"
 								type="number"
 								name="valeur"
 								min="0"
@@ -48,6 +49,7 @@
 								>Quelle est l'année de fabrication de votre véhicule?</label
 							>
 							<input
+								id="anneeFabrication"
 								type="number"
 								name="année"
 								min="1890"
@@ -59,7 +61,14 @@
 
 						<div class="cinquieme-question">
 							<label>Combien de kilomètres parcourez-vous par année?</label>
-							<input type="number" name="km" min="0" max="100 000" required />
+							<input
+								id="nbrKilometre"
+								type="number"
+								name="km"
+								min="0"
+								max="100 000"
+								required
+							/>
 							<br />
 						</div>
 
@@ -68,7 +77,13 @@
 								>Est-ce que votre véhicule possède une caméra de recul?</label
 							>
 							<br />
-							<input type="radio" name="camera" value="1" required />
+							<input
+								id="camera"
+								type="radio"
+								name="camera"
+								value="1"
+								required
+							/>
 							<span>Oui</span>
 							<input type="radio" name="camera" value="2" required />
 							<span>Non</span>
@@ -81,7 +96,13 @@
 								dernières années?</label
 							>
 							<br />
-							<input type="radio" name="reclamation" value="1" required />
+							<input
+								id="reclamation"
+								type="radio"
+								name="reclamation"
+								value="1"
+								required
+							/>
 							<span>Oui</span>
 							<input type="radio" name="reclamation" value="2" required />
 							<span>Non</span>
@@ -89,10 +110,11 @@
 						</div>
 
 						<div class="huitieme-question">
-							<label for="nbreclamation"
+							<label for="nbReclamation"
 								>Combien de réclamations avez-vous faites?</label
 							>
 							<input
+								id="nbrReclamation"
 								type="number"
 								name="nbreclamation"
 								min="1"
@@ -125,5 +147,7 @@
 				</div>
 			</form>
 		</div>
+
+		<script src="./js/script.js"></script>
 	</body>
 </html>
