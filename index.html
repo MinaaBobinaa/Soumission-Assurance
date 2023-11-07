@@ -1,153 +1,129 @@
 <!DOCTYPE html>
 <html lang="fr-ca">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Formulaire assurance</title>
-		<link rel="stylesheet" type="text/css" href="/styles/styles.css" />
-	</head>
 
-	<body>
-		<div class="inputGroup">
-			<form class="form">
-				<div class="input-group">
-					<fieldset>
-						<legend class="title">Soumissions d'assurance auto</legend>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaire assurance</title>
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+</head>
 
-						<div class="premiere-question">
-							<label for="genre">Quel est votre genre?</label>
-							<select id="genre" name="genre">
-								<option value="homme">Homme</option>
-								<option value="femme">Femmme</option>
-								<option value="non-binaire">Non-Binaire</option>
-								<br />
-							</select>
-						</div>
+<body>
+  <div class="inputGroup">
+    <form class="form">
+      <div class="input-group">
+        <fieldset>
+          <legend class="title">Soumissions d'assurance auto</legend>
 
-						<div class="deuxieme-question">
-							<label for="naissance">Date de naissance:</label>
-							<input type="date" id="naissance" name="naissance" required />
-							<br />
-						</div>
+          <div class="premiere-question">
+            <label for="genre">Quel est votre genre?</label>
+            <select id="genre" name="genre">
+              <option value="homme">Homme</option>
+              <option value="femme">Femmme</option>
+              <option value="non-binaire">Non-Binaire</option>
+              <br />
+            </select>
+          </div>
 
-						<div class="troisieme-question">
-							<label>Quelle est la valeur d'achat de votre véhicule?</label>
-							<input
-								id="valeur"
-								type="number"
-								name="valeur"
-								min="0"
-								max="100 000 000"
-								required
-							/>
-							<br />
-						</div>
+          <div class="deuxieme-question">
+            <label for="naissance">Date de naissance:</label>
+            <input type="date" id="naissance" name="naissance" required />
+            <br />
+          </div>
 
-						<div class="quatrieme-question">
-							<label
-								>Quelle est l'année de fabrication de votre véhicule?</label
-							>
-							<input
-								id="anneeFabrication"
-								type="number"
-								name="année"
-								min="1890"
-								max="2023"
-								required
-							/>
-							<br />
-						</div>
+          <div class="troisieme-question">
+            <label>Quelle est la valeur d'achat de votre véhicule?</label>
+            <input id="valeur" type="number" name="valeur" min="0" max="100 000 000" required />
+            <br />
+          </div>
 
-						<div class="cinquieme-question">
-							<label>Combien de kilomètres parcourez-vous par année?</label>
-							<input
-								id="nbrKilometre"
-								type="number"
-								name="km"
-								min="0"
-								max="100 000"
-								required
-							/>
-							<br />
-						</div>
+          <div class="quatrieme-question">
+            <label>Quelle est l'année de fabrication de votre véhicule?</label>
+            <input id="anneeFabrication" type="number" name="année" min="1890" max="2023" required />
+            <br />
+          </div>
 
-						<div>
-							<label for="camera"
-								>Est-ce que votre véhicule possède une caméra de recul?</label
-							>
-							<br />
-							<input
-								id="camera"
-								type="radio"
-								name="camera"
-								value="1"
-								required
-							/>
-							<span>Oui</span>
-							<input type="radio" name="camera" value="2" required />
-							<span>Non</span>
-							<br />
-						</div>
+          <div class="cinquieme-question">
+            <label>Combien de kilomètres parcourez-vous par année?</label>
+            <input id="nbrKilometre" type="number" name="km" min="0" max="100 000" required />
+            <br />
+          </div>
 
-						<div class="septieme-question">
-							<label for="camera"
-								>Avez-vous fait des réclamations d'assurance auto dans les 6
-								dernières années?</label
-							>
-							<br />
-							<input
-								id="reclamation"
-								type="radio"
-								name="reclamation"
-								value="1"
-								required
-							/>
-							<span>Oui</span>
-							<input type="radio" name="reclamation" value="2" required />
-							<span>Non</span>
-							<br />
-						</div>
+          <div class="container">
+            <div class="sixieme-question">
+              <form>
+                <label for="camera">Est-ce que votre véhicule possède une caméra de recul?
+                  <input id="camera" type="radio" name="camera" value="1" >
+                  <span>Oui</span>
+                </label>
+                <label>
+                  <input type="radio" name="camera" value="2">
+                  <span>Non</span>
+                </label>
+              </form>
+            </div>
+          </div>
 
-						<div class="huitieme-question">
-							<label for="nbReclamation"
-								>Combien de réclamations avez-vous faites?</label
-							>
-							<input
-								id="nbrReclamation"
-								type="number"
-								name="nbreclamation"
-								min="1"
-								max="100"
-								required
-							/>
-							<br />
-						</div>
+          <div class="container">
+            <div class="septieme-question">
+              <form>
+                <label for="reclamation">Avez-vous fait des réclamations d'assurance auto dans les 6
+                  dernières années?
+                  <input id="reclamation" type="radio" name="reclamation" value="1" >
+                  <span>Oui</span>
+                </label>
+                <label>
+                  <input type="radio" name="reclamation" value="2">
+                  <span>Non</span>
+                </label>
+              </form>
+            </div>
+          </div>
 
-						<div class="neuvieme-question">
-							<label for="montant"
-								>Pour la réclamation #x, quel montant avez-vous réclamé?</label
-							>
-							<input
-								type="number"
-								name="montant"
-								min="1"
-								max="1 000 000"
-								required
-							/>
-						</div>
+          <div class="huitieme-question">
+            <label for="nbReclamation"
+              >Combien de réclamations avez-vous faites?</label
+            >
+            <input
+              id="nbrReclamation"
+              type="number"
+              name="nbreclamation"
+              min="1"
+              max="100"
+              required
+            />
+            <br />
+          </div>
 
-						<div class="button">
-							<br />
-							<br />
-							<br />
-							<button class="sign">Envoyer</button>
-						</div>
-					</fieldset>
-				</div>
-			</form>
-		</div>
+          <div class="neuvieme-question">
+            <label for="montant"
+              >Pour la réclamation #x, quel montant avez-vous réclamé?</label
+            >
+            <input
+              type="number"
+              name="montant"
+              min="1"
+              max="1 000 000"
+              required
+            />
+          </div>
 
-		<script src="./js/script.js"></script>
-	</body>
+
+
+
+          <div class="button">
+            <br />
+            <br />
+            <br />
+            <button class="sign">Envoyer</button>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
