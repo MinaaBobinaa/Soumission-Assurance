@@ -157,6 +157,9 @@
     border-radius: 0.375rem;
     font-weight: 600;
   }
+  .listHolder{
+    display: none;
+  }
 
 /**/
 /* page menu */
