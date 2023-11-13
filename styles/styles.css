@@ -366,3 +366,19 @@
     --pbd: .15s;
     --pex: -24px;
   }
+
+  .verification-form small{
+    visibility: hidden;
+  }
+
+  .verification-form.success input{
+    border-color: rgb(149, 253, 149);
+  }
+  .verification-form.error input{
+    border-color: rgb(245, 57, 57);
+  }
+
+  .verification-form.error small{
+    visibility: visible;
+    color: rgb(245, 57, 57);
+  }

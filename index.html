@@ -11,8 +11,8 @@
 
 <body>
   <div class="inputGroup">
-    <form class="form">
-      <div class="input-group">
+    <form  id="form" action="/submit" method="post" class="form">
+      <div class="input-group"> 
         <fieldset>
           <legend class="title">Soumissions d'assurance auto</legend>
 
@@ -26,27 +26,31 @@
             </select>
           </div>
 
-          <div class="deuxieme-question">
+          <div class="verification-form">
             <label for="date">Date de naissance:</label>
-            <input type="text" id="date" name="date" required />
+            <input type="text" id="date" name="date" onblur="validerDate()" />
+            <small>Message Erreur</small>
             <br />
           </div>
 
-          <div class="troisieme-question">
+          <div class="verification-form">
             <label>Quelle est la valeur d'achat de votre véhicule?</label>
-            <input id="valeur" type="number" name="valeur" min="0" max="100 000 000" required />
+            <input id="valeur" type="number" name="valeur" onblur="validerValeur()"/>
+            <small>Message Erreur</small>
             <br />
           </div>
 
-          <div class="quatrieme-question">
+          <div class="verification-form">
             <label>Quelle est l'année de fabrication de votre véhicule?</label>
-            <input id="anneeFabrication" type="number" name="année" min="1890" max="2023" required />
+            <input id="anneeFabrication" type="number" name="année" onblur="validerAnnee()" />
+            <small>Message Erreur</small>
             <br />
           </div>
 
-          <div class="cinquieme-question">
+          <div class="verification-form">
             <label>Combien de kilomètres parcourez-vous par année?</label>
-            <input id="nbrKilometre" type="number" name="km" min="0" max="100 000" required />
+            <input id="nbrKilometre" type="number" name="km" onblur="validerNbrKilo()"/>
+            <small>Message Erreur</small>
             <br />
           </div>
 
@@ -70,7 +74,7 @@
               <form>
                 <label for="reclamation">Avez-vous fait des réclamations d'assurance auto dans les 6
                   dernières années?
-                  <input id="reclamation" type="radio" name="reclamation" value="1"  required onclick="clickHandler(this);">
+                  <input id="reclamation" type="radio" name="reclamation" value="1"  required >
                   <span>Oui</span>
                 </label>
                 <label>
@@ -82,15 +86,17 @@
           </div>
 
           <div  class="listHolder">
-            <div class="huitieme-question">
+            <div class="verification-form">
               <label for="nbReclamation">Combien de réclamations avez-vous faites?</label>
-              <input id="nbrReclamation" type="number" name="nbreclamation" min="1" max="100" />
+              <input id="nbrReclamation" type="number" name="nbreclamation" onblur="validerNbrRecla()"/>
+              <small>Message Erreur</small>
               <br />
             </div>
 
-            <div class="neuvieme-question">
+            <div class="verification-form">
               <label for="montant">Pour la réclamation #x, quel montant avez-vous réclamé?</label>
-              <input id="montant" type="number" name="montant" min="1" max="1 000 000" />
+              <input id="montant" type="number" name="montant" onblur="validerMontant()"/>
+              <small>Message Erreur</small>
             </div>
 
           </div>
@@ -100,7 +106,7 @@
             <br />
             <br />
             <br />
-            <button class="sign">Envoyer</button>
+            <button type ="submit" class="sign">Envoyer</button>
           </div>
         </fieldset>
       </div>

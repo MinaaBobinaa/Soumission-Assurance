@@ -1,39 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Validation de formulaire</h1>
+  <form id="myForm" onsubmit="return validateForm()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" onblur="validateInput(this)">
+    <span id="usernameError" class="error"></span>
 
-<form id="formulaire" action="/submit" method="post">
-	<p id="erreur-global"></p>
-	<label for="nom">Nom :</label>
-	<input type="text" id="nom">
-	<br>
-	<label for="prenom">Prenom :</label>
-	<input type="text" id="prenom">
-	<br>
-	<label for="date">Date de naissance :</label>
-	<input type="text" id="date">
-	<span id="erreur-date"></span>
-	<br>
-	<label for="code">Code permanent :</label>
-	<input type="text" id="code">
-	<span id="erreur-code"></span>
-	<br>
-	<label for="genre">Genre :</label>
-	<input type="text" id="genre">
-	<span id="erreur-genre"></span>
-	<br>
-	<p id="erreur-champs-vides"></p>
-</form>
-<button onclick="valider()">Soumettre</button>
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" onblur="validateInput(this)">
+    <span id="passwordError" class="error"></span>
+
+    <br>
+
+    <!-- Add more input fields as needed -->
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateInput(input) {
+      const inputValue = input.value.trim();
+      const errorSpanId = input.id + "Error";
+      const errorSpan = document.getElementById(errorSpanId);
+
+      // Example validation, you can customize this based on your requirements
+      if (inputValue === "") {
+        errorSpan.textContent = "This field is required.";
+      } else {
+        errorSpan.textContent = ""; // Clear the error message
+      }
+    }
+
+    function validateForm() {
+      // Validate each input field before submitting the form
+      const inputs = document.querySelectorAll("input");
+      let isValid = true;
+
+      inputs.forEach(input => {
+        if (input.type !== "submit") {
+          validateInput(input);
+
+          // If there's an error for any input, set isValid to false
+          if (input.nextElementSibling.textContent !== "") {
+            isValid = false;
+          }
+        }
+      });
+
+      // Return false to prevent form submission if isValid is false
+      return isValid;
+    }
+  </script>
 
 </body>
-<script src="./js/script.js"></script>
 </html>
