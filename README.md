@@ -1,6 +1,3 @@
-# INF3190-TP2
-# VIEW THE WEBSITE
-
 
 
 ## Getting started
